@@ -1,0 +1,17 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "../layouts/Layout.astro";
+
+export const prerender = false;
+---
+<Layout>
+<h2>
+This is the fallback URL.
+</h2>
+<p>
+These are the received params:
+</p>
+<code>
+    {JSON.stringify(Astro.params)}
+</code>
+</Layout>

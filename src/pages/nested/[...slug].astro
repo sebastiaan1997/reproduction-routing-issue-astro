@@ -1,0 +1,26 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "../../layouts/Layout.astro";
+
+
+export const prerender = true;
+export const getStaticPaths = (() => {
+    
+    return [
+        { params: { slug: '/1'}},
+        { params: { slug: '/2'}}
+    ];
+}) satisfies GetStaticPaths;
+---
+<Layout>
+    <h2>
+This is the nested catch all page
+</h2>
+
+<p>
+These are the received params:
+</p>
+<code>
+    {JSON.stringify(Astro.params)}
+</code>
+</Layout>
