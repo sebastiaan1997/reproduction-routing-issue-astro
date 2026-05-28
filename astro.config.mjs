@@ -6,9 +6,4 @@ import vercel from '@astrojs/vercel';
 // https://astro.build/config
 export default defineConfig({
   adapter: vercel(),
-  experimental: {
-    advancedRouting: {
-      fetchFile: 'router.ts'
-    }
-  }
 });
